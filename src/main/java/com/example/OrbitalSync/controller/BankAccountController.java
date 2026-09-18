@@ -25,9 +25,9 @@ public class BankAccountController {
 
     // GET account by ID
     @GetMapping("/{id}")
-    public BankAccount getAccount(@PathVariable int id) {
+    public BankAccount getAccount(@PathVariable Integer id) {
         return bankAccountService.getAccountById(id);
-    }
+    } 
 
     // POST
     @PostMapping

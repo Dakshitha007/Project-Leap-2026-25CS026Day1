@@ -1,30 +1,33 @@
 package com.example.OrbitalSync.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+/*import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;*/
 import jakarta.persistence.Id;
 
 @Entity
 public class BankAccount {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String accountNumber;
     private String name;
     private double balance;
 
+    // Default constructor
     public BankAccount() {
     }
 
+    // Parameterized constructor
     public BankAccount(int id, String accountNumber, String name, double balance) {
         this.id = id;
         this.accountNumber = accountNumber;
         this.name = name;
         this.balance = balance;
     }
+
+    // Getters and Setters
 
     public int getId() {
         return id;
